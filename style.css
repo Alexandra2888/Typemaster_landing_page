@@ -1,0 +1,480 @@
+:root {
+
+
+    --ff: 'Barlow Medium';
+
+    --fs-100: 1rem;
+    --fs-200: 1.5rem;
+    --fs-300: 2rem;
+    --fs-400: 3rem;
+    --fs-500: 3.5rem;
+
+
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    --clr-neutral-100: #fff;
+    --clr-neutral-200: #e8eff2;
+
+
+    --clr-primary-300: #7b8bad;
+    --clr-primary-400: #162542;
+
+    --clr-accent-500: #ff9b62;
+    --clr-accent-600: #f16718;
+
+}
+
+
+
+/*reset*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.he {
+    line-height: 1.2;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+    margin: 0;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+    padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    line-height: 1.4;
+    font-family: var(--ff);
+
+}
+
+/*utility*/
+
+.accent {
+    background-color: var(--clr-accent-600);
+    color: var(--clr-neutral-100);
+}
+
+/*header*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 1em;
+}
+
+nav button {
+    font-weight: var(--fw-700);
+    font-size: var(--fs-100);
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-primary-400);
+}
+
+nav button:focus,
+nav button:hover {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-200);
+}
+
+
+/*description*/
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .5em;
+}
+
+.description__content {
+    margin: auto;
+    max-width: 21.18rem;
+}
+
+.description h2 {
+    font-size: var(--fs-400);
+    text-transform: uppercase;
+    padding: .5em .3em;
+    color: var(--clr-primary-400);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.description p {
+    font-weight: var(--fw-500);
+    line-height: 1.6;
+    color: var(--clr-primary-300);
+    padding: 1em 1.5em;
+    text-align: left;
+}
+
+
+.description__content-button {
+    margin: 0.4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description__content-button button {
+    padding: 11px 14px;
+    margin-left: .5em;
+    margin-right: .5em;
+    text-transform: uppercase;
+    font-size: var(--fs-100);
+    font-weight: var(--fw-700);
+    border-radius: 10px;
+    border: none;
+}
+
+.description__content-button button:focus,
+.description__content-button button:hover {
+    background-color: var(--clr-accent-500);
+}
+
+.description__content-button span {
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    font-size: var(--fs-100);
+    color: var(--clr-primary-300);
+    margin-top: 11px;
+}
+
+.description__content-img {
+    background-image: url(assets/mobile/image-keyboard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 23.25rem;
+    height: 20.68rem;
+    border-radius: 1.25rem;
+    margin: 2em auto;
+}
+
+@media(min-width:768px) {
+
+    .description {
+        flex-direction: row;
+    }
+
+    .description__content {
+        max-width: 27.81rem;
+    }
+
+    .description__content-img {
+        background-image: url(assets/tablet/image-keyboard.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 29.87rem;
+        height: 26.56rem;
+    }
+}
+
+
+@media(min-width:1100px) {
+
+    .description__content {
+        max-width: 27.81rem;
+        padding: 1em 2em;
+    }
+
+    .description__content-img {
+        background-image: url(assets/desktop/image-keyboard.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 33.75rem;
+        height: 30rem;
+    }
+
+    .description__content-block {
+        background-image: url(assets/shared/pattern-square.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 15.93rem;
+        height: 15rem;
+        margin-top: 2em;
+        margin-left: 1em;
+        margin-right: -6.25rem;
+    }
+}
+
+/*keyboards*/
+
+.keyboards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.keyboards__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 2em 0;
+}
+
+
+
+
+.keyboards__desc h3 {
+    font-weight: var(--fw-900);
+    font-size: var(--fs-300);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--clr-primary-400);
+    padding: 1em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.keyboards__desc p {
+    font-weight: var(--fw-500);
+    font-size: var(--fs-100);
+    text-align: left;
+    padding: 0 3em;
+    line-height: 1.5;
+    color: var(--clr-primary-300);
+}
+
+
+
+.keyboards__imgs {
+    display: flex;
+    margin-top: 1.2em;
+    margin-bottom: 2em;
+    gap: 2em;
+}
+
+.img__phone {
+    background-image: url(assets/mobile/image-phone-and-keyboard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 8.06rem;
+    height: 12.06rem;
+    left: -2rem;
+    border-radius: 1.25rem;
+    position: relative;
+}
+
+.img__phone::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-accent-600);
+    opacity: 0.6;/
+}
+
+.img__glass {
+    background-image: url(assets/mobile/image-glass-and-keyboard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 13.75rem;
+    height: 12.06rem;
+    margin-right: 2em;
+    border-radius: 1.25rem;
+}
+
+
+
+@media(min-width:768px) {
+
+    .keyboards {
+        margin-top: 2em;
+        flex-direction: column;
+    }
+
+    .keyboards__desc {
+        flex-direction: row;
+        margin-left: 3em;
+        padding: 2em;
+    }
+
+    .keyboards__desc p {
+        padding: 1em;
+        text-align: left;
+        margin-top: 2em;
+        margin-left: 1em;
+        max-width: 24.875rem;
+    }
+
+    .keyboards__desc h3 {
+        text-transform: uppercase;
+        font-weight: var(--fw-900);
+        font-size: var(--fs-300);
+        padding: 1.5rem;
+        text-align: left;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .img__phone {
+        background-image: url(assets/tablet/image-phone-and-keyboard.jpg);
+        width: 214px;
+        height: 320px;
+    }
+
+    .img__glass {
+        background-image: url(assets/tablet/image-glass-and-keyboard.jpg);
+        width: 27.81rem;
+        height: 20rem;
+    }
+
+}
+
+
+@media(min-width:1100px) {
+
+    .keyboards {
+        flex-direction: row;
+    }
+
+    .keyboards__desc {
+        flex-direction: column;
+        margin-left: .7em;
+    }
+
+    .keyboards__desc p {
+        margin-left: 1em;
+    }
+
+    .keyboards__desc h3 {
+        text-align: left;
+        padding-left: 1em;
+        max-width: 15.93rem;
+    }
+
+    .keyboards__block {
+        background-image: url(assets/shared/pattern-square.svg);
+        width: 15.93rem;
+        height: 14.75rem;
+        margin-top: 4.8em;
+        margin-left: -9.375rem;
+        margin-right: 2em;
+    }
+}
+
+
+/*cto*/
+
+.cto {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center center;
+}
+
+
+.cto img {
+    width: 4.06rem;
+    height: 4.06rem;
+    border-radius: 16px;
+    margin: auto;
+}
+
+.cto h3 {
+    text-transform: uppercase;
+    font-weight: var(--fw-900);
+    font-size: var(--fs-200);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.3;
+    text-align: center;
+    padding: 1em 2em;
+}
+
+.cto p {
+    font-weight: var(--fw-500);
+    font-size: var(--fs-100);
+    color: var(--clr-primary-300);
+    line-height: 160%;
+    text-align: left;
+    padding: 1em;
+}
+
+.cto>div {
+    max-width: 20.43rem;
+}
+
+@media(min-width:768px) {
+    .cto {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cto h3 {
+        text-align: left;
+        padding: 1em 2em;
+    }
+
+    .cto img {
+        margin-left: 3.125rem;
+
+    }
+
+    .cto p {
+        margin-left: 4.16rem;
+        margin-bottom: 1em;
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .cto {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 1.5em;
+    }
+}
+
+
+
+/*footer*/
+
+.footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: var(--fw-500);
+    color: var(--clr-primary-300);
+}
+
+.footer__copyright-bold {
+    font-weight: var(--fw-700);
+    padding: 1.5em 1em;
+    text-shadow: 1px 1px 1px var(--clr-primary-300);
+}
